@@ -6,14 +6,22 @@ int main()
 {
     int n;
     cin >> n;
-    vector<int> v(n);
+    // vector<int> v(n);
+    int arr[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> v[i];
+        cin >> arr[i];
     }
-    for (int val : v)
+    sort(arr, arr + n);
+    int flag = 0;
+    for (int i = 0; i < n - 1; i++)
     {
-        cout << val << " ";
+        if (arr[i] == arr[i + 1])
+        {
+            flag = 1;
+            break;
+        }
+        // cout << arr[i] << " ";
     }
     return 0;
 }

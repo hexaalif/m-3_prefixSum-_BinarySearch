@@ -6,8 +6,7 @@ int main()
 {
     int t;
     cin >> t;
-    bool sorted = true;
-    for (int i = 1; i <= t; i++)
+    while (t--)
     {
         int n;
         cin >> n;
@@ -16,16 +15,18 @@ int main()
         {
             cin >> arr[j];
         }
+        int flag = 1;
         for (int j = 0; j < n - 1; j++)
         {
             if (arr[j] > arr[j + 1])
             {
-                sorted = false;
+                flag = 0;
+                break;
             }
             // cout<<arr[i]<<" ";
         }
 
-        if (sorted)
+        if (flag)
         {
             cout << "YES" << endl;
         }
