@@ -23,5 +23,13 @@ int main()
         }
         // cout << arr[i] << " ";
     }
+    if (flag)
+    {
+        cout << "YES";
+    }
+    else
+    {
+        cout << "NO";
+    }
     return 0;
 }
